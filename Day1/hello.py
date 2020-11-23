@@ -20,3 +20,7 @@ print('hello, world!')
 print('你好', '世界')
 print('hello', 'world', sep=', ', end='!')
 print('goodbye, world', end='!\n')
+
+i = 34-5j
+
+print(i)
