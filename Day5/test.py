@@ -46,4 +46,10 @@ print(add(1, 2))
 print(add(1, 2, 3))
 print(add(1, 3, 5, 7, 9))
 
+name  = 'wsn'
+age = 22
+
+print('我是%s , 今年%d岁' %(name, age))
+print(f'我是{name} , 今年{age}岁')
+
 
