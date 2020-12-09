@@ -4,7 +4,7 @@ import os
 
 import re
 
-from bs4 import BeautifulSoup
+
 from lxml import etree
 import xlwt
 
@@ -37,7 +37,7 @@ def getListFild(url):
     try:
         response = request.urlopen(req, timeout=5)
     except error.HTTPError:
-        raise "请求错误"
+        raise Exception("请求错误")
     text = str(response.read(), 'utf-8')
 
     return text
