@@ -23,3 +23,18 @@ print(my_str.count('wo', 10, 20))    # 1次数
 # ?修改
 
 #! replace()
+
+print(my_str.replace('wo' ,'ni'))
+#! split() 分割
+
+print(my_str.split("shi"))
+
+#! join()  合并
+
+list1 = ['chuan', 'zhi', 'bo', 'ke']
+t1 = ('aa', 'b', 'cc', 'ddd')
+print('...'.join(list1))
+print('...'.join(t1))
+
+
+
