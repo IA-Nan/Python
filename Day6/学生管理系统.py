@@ -42,6 +42,41 @@ def del_info():
         else:
             print('姓名不存在删除失败')
     # info.remove(del_name)
+def revise_info():
+    """修改学员信息"""
+    revise_name = input('请输入要修改的学员姓名')
+    global info
+    for i in info:
+        if revise_name == i['name']:
+            print(i)
+            new_id = input('请输入修改的学号')
+            new_name = input('请输入修改的姓名')
+            new_tel = input('请输入修改的电话')
+            i['id'] = new_id
+            i['name'] = new_name
+            i['tel'] = new_tel
+            print(i)
+        else:
+            print('姓名不存在')
+
+def find_info():
+    """按姓名查询"""
+    find_name = input('请输入查询学生的姓名:')
+    global info
+    for i in info:
+        if find_name == i['name']:
+            print(f'''学号:{i['id']}\t姓名:{i['name']}\t电话:{i['tel']}''')
+        else:
+            print('姓名存在')
+    
+def find_all_info():
+    print('学号\t姓名\t电话\t')
+    global info
+    for i in info:
+        print(f"{i['id']}\t{i['name']}\t{i['tel']}")
+
+
+
 
 
 
@@ -55,13 +90,16 @@ while True:
         # print('删除学员')
         del_info()
     elif user_num == '3':
-        print('修改学员信息')
+        # print('修改学员信息')
+        revise_info()
 
     elif user_num == '4':
-        print('查询学员信息')
+        # print('查询学员信息')
+        find_info()
 
     elif user_num == '5':
-        print('显示所有学员信息')
+        # print('显示所有学员信息')
+        find_all_info()
 
     elif user_num == '6':
         print('退出系统')
